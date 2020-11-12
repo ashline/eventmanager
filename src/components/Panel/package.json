@@ -1,0 +1,5 @@
+{
+  "name": "panel",
+  "description": "component for grouping ui sections visually",
+  "main": "./Panel.js"
+}

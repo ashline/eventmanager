@@ -1,0 +1,18 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.root {
+  border-radius: 3px;
+  padding: 20px 40px;
+  background-color: @white;
+  .box-shadow();
+
+  .title {
+    display: block;
+    padding-bottom: 10px;
+    font-weight: 500;
+    font-size: 24px;
+    border-bottom: 2px solid @border-grey;
+    color: @section-title-blue;
+  }
+}
