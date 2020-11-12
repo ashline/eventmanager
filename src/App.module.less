@@ -1,0 +1,17 @@
+@import "styles/variables";
+
+.root {
+  .content {
+    width: @page-width;
+    margin: 0 auto;
+    padding: 30px 0;
+
+    @media (max-width: @screen-width-medium) {
+      width: 80%;
+    }
+
+    @media (max-width: @screen-width-small) {
+      width: 90%;
+    }
+  }
+}

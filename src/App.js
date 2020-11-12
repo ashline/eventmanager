@@ -1,27 +1,31 @@
-import React from 'react';
+import React from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
-import logo from './logo.svg';
-import './App.css';
+import AppHeader from "./components/AppHeader";
+import NewEventForm from "./components/NewEventForm";
 
-function App() {
+import SuccessAlert from "./components/SuccessAlert";
+
+import styles from "./App.module.less";
+
+const App = ({ isFormSubmitted }) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.root}>
+      <AppHeader title="New event"></AppHeader>
+      <div className={styles.content}>
+        {isFormSubmitted ? <SuccessAlert /> : <NewEventForm />}
+      </div>
     </div>
   );
-}
+};
 
-export default App;
+App.propTypes = {
+  isFormSubmitted: PropTypes.bool.isRequired,
+};
+
+const mapStateToProps = (state) => ({
+  isFormSubmitted: state.form.isFormSubmitted,
+});
+
+export default connect(mapStateToProps)(App);
