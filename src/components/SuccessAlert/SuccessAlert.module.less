@@ -1,0 +1,21 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.root {
+  padding: 20px 40px;
+  background-color: @success-bg-green;
+  .box-shadow();
+
+  .title {
+    display: block;
+    color: @success-fg-green;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .content {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+  }
+}

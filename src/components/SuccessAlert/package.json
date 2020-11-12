@@ -1,0 +1,5 @@
+{
+    "name": "success-alert",
+    "description": "Component shown after successfully submiting the form",
+    "main": "./SuccessAlert.js"
+}
