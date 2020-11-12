@@ -1,0 +1,5 @@
+{
+    "name": "new-event-form",
+    "description": "Form for creating new events",
+    "main": "./NewEventForm.js"
+}
