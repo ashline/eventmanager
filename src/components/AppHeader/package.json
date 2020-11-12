@@ -1,0 +1,5 @@
+{
+    "name": "app-header",
+    "description": "Header component that goes at the top of the page",
+    "main": "./AppHeader.js"
+}

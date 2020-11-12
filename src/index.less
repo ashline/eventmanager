@@ -1,0 +1,93 @@
+@import "./styles/variables";
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: @body-grey;
+  color: @body-text-grey;
+}
+
+button {
+  padding: 14px 18px;
+  text-transform: uppercase;
+  font-weight: 500;
+  border: none;
+  border-radius: 3px;
+
+  &[type="submit"] {
+    color: @white;
+    background-color: @submit-button-orange;
+  }
+}
+
+input,
+textarea,
+select {
+  border: 2px solid @input-border-color;
+  padding: 8px;
+  &::placeholder {
+    color: @placeholder-grey;
+  }
+
+  &.long {
+    width: 400px;
+    max-width: 400px;
+    @media (max-width: @screen-width-x-small) {
+      width: 100%;
+    }
+  }
+  &.medium {
+    width: 130px;
+    max-width: 130px;
+  }
+  &.small {
+    width: 70px;
+    max-width: 70px;
+  }
+}
+
+select {
+  box-sizing: content-box;
+}
+
+input[type="date"]:invalid::-webkit-datetime-edit {
+  color: @placeholder-grey;
+}
+
+.super {
+  vertical-align: super;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.f-a-center {
+  align-items: center;
+}
+
+.f-j-between {
+  justify-content: space-between;
+}
+
+.block {
+  display: block;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.m-l-10 {
+  margin-left: 10px;
+}
+.m-t-20 {
+  margin-top: 20px;
+}
+.m-t-30 {
+  margin-top: 30px;
+}
